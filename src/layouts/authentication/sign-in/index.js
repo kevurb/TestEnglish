@@ -28,10 +28,11 @@ import SoftInput from "components/SoftInput";
 import SoftButton from "components/SoftButton";
 
 // Authentication layout components
-import CoverLayout from "layouts/authentication/components/CoverLayout";
+import CoverLayout from "layouts/authentication/components/BasicLayout";
 
 // Images
-import curved9 from "assets/images/curved-images/curved-6.jpg";
+import curved9 from "assets/images/curved-images/curved14.jpg";
+import BasicLayout from "../components/BasicLayout";
 
 function SignIn() {
   const [rememberMe, setRememberMe] = useState(true);
@@ -39,15 +40,15 @@ function SignIn() {
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
   return (
-    <CoverLayout
-      title="Welcome back"
+   <BasicLayout
+    title="Welcome back"
       description="Enter your email and password to sign in"
       image={curved9}
     >
       <SoftBox component="form" role="form">
         <SoftBox mb={2}>
           <SoftBox mb={1} ml={0.5}>
-            <SoftTypography component="label" variant="caption" fontWeight="bold">
+            <SoftTypography color= "white" component="label" variant="caption" fontWeight="bold">
               Email
             </SoftTypography>
           </SoftBox>
@@ -55,10 +56,10 @@ function SignIn() {
         </SoftBox>
         <SoftBox mb={2}>
           <SoftBox mb={1} ml={0.5}>
-            <SoftTypography component="label" variant="caption" fontWeight="bold">
+            <SoftTypography color= "white" component="label" variant="caption" fontWeight="bold">
               Password
             </SoftTypography>
-          </SoftBox>
+          </SoftBox>  
           <SoftInput type="password" placeholder="Password" />
         </SoftBox>
         <SoftBox display="flex" alignItems="center">
@@ -93,7 +94,7 @@ function SignIn() {
           </SoftTypography>
         </SoftBox>
       </SoftBox>
-    </CoverLayout>
+  </BasicLayout>
   );
 }
 
