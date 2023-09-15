@@ -44,6 +44,7 @@ import RTL from "layouts/rtl";
 import Profile from "layouts/profile";
 import SignIn from "layouts/authentication/sign-in";
 import SignUp from "layouts/authentication/sign-up";
+import ForgotPass from "layouts/authentication/forgot-pass"
 
 // Soft UI Dashboard React icons
 import Shop from "examples/Icons/Shop";
@@ -127,6 +128,15 @@ const routes = [
     route: "/authentication/sign-up",
     icon: <SpaceShip size="12px" />,
     component: <SignUp />,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Forgot Pasword",
+    key: "forgot-pass",
+    route: "/authentication/forgot-pass",
+    icon: <SpaceShip size="12px" />,
+    component: <ForgotPass />,
     noCollapse: true,
   },
 ];

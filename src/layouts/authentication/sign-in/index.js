@@ -17,7 +17,6 @@ import { useState } from "react";
 
 // react-router-dom components
 import { Link } from "react-router-dom";
-
 // @mui material components
 import Switch from "@mui/material/Switch";
 
@@ -77,6 +76,22 @@ function SignIn() {
           <SoftButton variant="gradient" color="info" fullWidth>
             sign in
           </SoftButton>
+        </SoftBox>
+        <SoftBox textAlign="center">
+        <SoftTypography variant="button" color="text" fontWeight="regular">
+            Don&apos;t have an account?{" "}
+            <SoftTypography
+              component={Link}
+              to="/authentication/forgot-pass"
+              variant="button"
+              color="secondary"
+              fontWeight="medium"
+              opacity = {5}
+            >
+              Forgot password
+            </SoftTypography>
+          </SoftTypography>
+
         </SoftBox>
         <SoftBox mt={3} textAlign="center">
           <SoftTypography variant="button" color="text" fontWeight="regular">
